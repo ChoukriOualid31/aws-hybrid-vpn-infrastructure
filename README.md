@@ -1,11 +1,11 @@
-# 🌐 Infrastructure Cloud Hybride AWS + VPN Site-to-Site
+# Infrastructure Cloud Hybride AWS + VPN Site-to-Site
 
 ![AWS](https://img.shields.io/badge/AWS-VPC%20%2B%20EC2-orange?style=for-the-badge&logo=amazon-aws)
 ![VPN](https://img.shields.io/badge/VPN-IPsec%20Site--to--Site-blue?style=for-the-badge)
 ![Monitoring](https://img.shields.io/badge/Monitoring-Grafana%20%2B%20Prometheus-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-En%20développement-yellow?style=for-the-badge)
 
-## 📋 Table des matières
+## Table des matières
 
 - [Présentation](#-présentation)
 - [Architecture](#-architecture)
@@ -19,7 +19,7 @@
 
 ---
 
-## 🎯 Présentation
+## Présentation
 
 Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnectant :
 
@@ -38,7 +38,7 @@ Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnec
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Schéma global
 
@@ -46,14 +46,14 @@ Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnec
 
 ### Composants
 
-#### 🖥️ Infrastructure locale (VirtualBox)
+#### Infrastructure locale (VirtualBox)
 
 | Composant | IP | Rôle |
 |-----------|-----|------|
 | **pfSense** | 192.168.10.1 | Firewall + VPN Client |
 | **Ubuntu Server** | 192.168.10.10 | Reverse Proxy + Monitoring |
 
-#### ☁️ Infrastructure AWS
+#### Infrastructure AWS
 
 | Composant | Réseau | Rôle |
 |-----------|--------|------|
@@ -64,7 +64,7 @@ Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnec
 | **EC2 Web Server** | 10.0.2.10 | Apache privé |
 | **VPN Gateway** | - | Endpoint VPN AWS |
 
-#### 🔐 Tunnel VPN
+#### Tunnel VPN
 
 - **Type** : IPsec Site-to-Site
 - **Chiffrement** : AES-256
@@ -73,7 +73,7 @@ Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnec
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 ### Infrastructure
 
@@ -103,7 +103,7 @@ Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnec
 
 ---
 
-## 📋 Prérequis
+## Prérequis
 
 ### Matériel
 
@@ -127,7 +127,7 @@ Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnec
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Phase 1 : Environnement local
 
@@ -169,11 +169,11 @@ Ce projet consiste à déployer une **infrastructure Cloud hybride** interconnec
    - Firewall rules
    - NAT configuration
 
-📖 **Documentation détaillée** : [docs/02-vpn-configuration.md](docs/02-vpn-configuration.md)
+**Documentation détaillée** : [docs/02-vpn-configuration.md](docs/02-vpn-configuration.md)
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Monitoring
 
@@ -186,11 +186,11 @@ docker-compose up -d
 Accès Grafana : `http://192.168.10.10:3000`  
 Credentials : `admin` / `admin123`
 
-📖 **Documentation** : [docs/03-monitoring-setup.md](docs/03-monitoring-setup.md)
+**Documentation** : [docs/03-monitoring-setup.md](docs/03-monitoring-setup.md)
 
 ---
 
-## 🧪 Tests
+## Tests
 
 ### Vérification connectivité VPN
 ```bash
@@ -208,11 +208,11 @@ ping 192.168.10.10  # Ubuntu local
 - [ ] Grafana affiche les dashboards
 - [ ] Loki reçoit les logs
 
-📖 **Procédures de test** : [tests/test-connectivity.sh](tests/test-connectivity.sh)
+**Procédures de test** : [tests/test-connectivity.sh](tests/test-connectivity.sh)
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - [01 - Guide d'installation](docs/01-installation-guide.md)
 - [02 - Configuration VPN](docs/02-vpn-configuration.md)
@@ -222,7 +222,7 @@ ping 192.168.10.10  # Ubuntu local
 
 ---
 
-## 👤 Auteur
+## Auteur
 
 **[Votre Nom]**
 
@@ -232,18 +232,14 @@ ping 192.168.10.10  # Ubuntu local
 
 ---
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---
 
-## 🙏 Remerciements
+## Remerciements
 
 - Documentation AWS
 - Communauté pfSense
 - Projet Prometheus/Grafana
-
----
-
-**⭐ Si ce projet vous a été utile, n'hésitez pas à mettre une étoile !**
