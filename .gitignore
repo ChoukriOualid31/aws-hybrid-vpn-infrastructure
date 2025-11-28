@@ -1,0 +1,50 @@
+# Secrets et clés
+*.pem
+*.key
+*.crt
+*.p12
+secrets/
+.env
+aws-credentials.txt
+pfsense-config-backup.xml
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+terraform.tfvars
+
+# Logs
+*.log
+logs/
+*.tmp
+
+# ISOs (trop gros pour GitHub)
+*.iso
+*.qcow2
+*.vdi
+*.vmdk
+
+# Backups
+*.bak
+*.backup
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+
+# Fichiers temporaires
+tmp/
+temp/
+cache/
